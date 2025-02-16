@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Are You So Cute? 💖</title>
+    <title>Why Are You So DUmb? 💖</title>
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            background-color: #ffdde1;
-            color: #ff4081;
+            background-color: #e0e7ff;
+            color: #6a0dad;
         }
         .container {
             margin-top: 50px;
@@ -20,12 +20,12 @@
             margin: 20px auto;
             padding: 20px;
             width: 50%;
-            background: #fff3f3;
-            border: 2px solid #ff4081;
+            background: #f3e8ff;
+            border: 2px solid #6a0dad;
             border-radius: 10px;
         }
         .btn {
-            background: #ff4081;
+            background: #6a0dad;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -37,7 +37,7 @@
             margin: 20px auto; /* Center it below the image */
         }
         .btn:hover {
-            background: #ff79a1;
+            background: #9a4dff;
         }
         img {
             width: 150px;
@@ -47,7 +47,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         /* Modal Styling */
         .modal {
             display: none;
@@ -76,7 +75,7 @@
             cursor: pointer;
         }
         video {
-            width: 100%;
+            width: 80%;
             border-radius: 10px;
         }
     </style>
@@ -84,15 +83,13 @@
 <body>
     <div class="container">
         <h1>💘 Hey You! 💘</h1>
-        <div id="message1" class="message-box">You have a cute smile! 😍</div>
-        <div id="message2" class="message-box">Your laugh is adorable! 🤭</div>
-        <div id="message3" class="message-box">You make hearts melt! ❤️</div>
-        <div id="message4" class="message-box">Okay, but really... why are you so cute? 💖</div>
-        
+        <div id="message1" class="message-box">You have a gay smile!</div>
+        <div id="message2" class="message-box">Your laugh is gay!</div>
+        <div id="message3" class="message-box">You make hearts lesbian!</div>
+        <div id="message4" class="message-box">Okay, but really... why are you so gay?</div>
+        <button id="nextBtn" class="btn">Next 💖</button>
         <img id="cuteImg" src="images/hmm.jpg" alt="Cute heart">
-        <button id="nextBtn" class="btn">Next 💖</button> <!-- Moved Below Image -->
     </div>
-
     <!-- Video Pop-up Modal -->
     <div id="videoModal" class="modal">
         <div class="modal-content">
@@ -100,23 +97,21 @@
             <h2>For You 💖</h2>
             <video id="cuteVideo" autoplay loop muted>
                 <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-                <track src="description_en.vtt" kind="descriptions" srclang="en" label="English">
-                <source src="images/Aerina.mp4" type="video/mp4">
+                <track src="descriptions_en.vtt" kind="descriptions" srclang="en" label="English Descriptions">
+                <source src="images/gay.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
-
     <script>
         let index = 1;
         let images = [
             "images/hmm.jpg",
-            "images/catsmile.jpg",
+            "images/catbored.png",
             "images/catlaugh.png",
-            "images/catheart.png",
+            "images/catangry.png",
             "images/cathehe.jpg"
         ];
-
         document.getElementById("nextBtn").addEventListener("click", function() {
             if (index <= 4) {
                 document.getElementById("message" + index).style.display = "block";
@@ -136,7 +131,6 @@
         document.querySelector(".close").addEventListener("click", function() {
             document.getElementById("videoModal").style.display = "none";
         });
-
         window.addEventListener("click", function(event) {
             let modal = document.getElementById("videoModal");
             if (event.target === modal) {
@@ -144,9 +138,4 @@
             }
         });
     </script>
-<audio id="bgm" autoplay loop>
-    <source src="images/Die With A Smile-(SambalpuriStar.In).mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-</body>
 </html>
