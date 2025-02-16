@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Are You So Cute? 💖</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffdde1;
+            color: #ff4081;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .message-box {
+            display: none;
+            font-size: 24px;
+            margin: 20px auto;
+            padding: 20px;
+            width: 50%;
+            background: #fff3f3;
+            border: 2px solid #ff4081;
+            border-radius: 10px;
+        }
+        .btn {
+            background: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #ff79a1;
+        }
+        img {
+            width: 150px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            width: 60%;
+            border-radius: 10px;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💘 Hey You! 💘</h1>
+        <div id="message1" class="message-box">You have a cute smile! 😍</div>
+        <div id="message2" class="message-box">Your laugh is adorable! 🤭</div>
+        <div id="message3" class="message-box">You make hearts melt! ❤️</div>
+        <div id="message4" class="message-box">Okay, but really... why are you so cute? 💖</div>
+        <button id="nextBtn" class="btn">Next 💖</button>
+        <img id="cuteImg" src="images/hmm.jpg" alt="Cute heart">
+    </div>
+
+    <!-- Video Pop-up Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>For You 💖</h2>
+            <video id="cuteVideo" autoplay loop muted>
+                <source src="images/Aerina.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        let index = 1;
+        let images = [
+            "images/hmm.jpg",
+            "images/catsmile.jpg",
+            "images/catlaugh.png",
+            "images/catheart.png",
+            "images/cathehe.jpg"
+        ];
+
+        document.getElementById("nextBtn").addEventListener("click", function() {
+            if (index <= 4) {
+                document.getElementById("message" + index).style.display = "block";
+                document.getElementById("cuteImg").src = images[index]; // Change image
+                index++;
+            }
+            if (index > 4) {
+                this.innerText = "Aww 💕";
+                this.addEventListener("click", function() {
+                    let videoModal = document.getElementById("videoModal");
+
+                    videoModal.style.display = "block"; // Show video modal
+                });
+            }
+        });
+
+        // Close the modal when clicking '×' or outside the modal
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("videoModal").style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            let modal = document.getElementById("videoModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
