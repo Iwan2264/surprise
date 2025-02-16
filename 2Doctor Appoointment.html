@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: flex; /* Flexbox layout to align image and form side by side */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            flex: 1; /* Take up 1/3 of the container */
+            padding-right: 20px;
+        }
+
+        .form-container {
+            flex: 2; /* Take up 2/3 of the container */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        td input[type="text"], td input[type="email"], td input[type="tel"], td input[type="date"], td select, td input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .radio-group input {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00294b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #00294b;
+        }
+    </style>
+</head>
+<body>  
+    <div class="container">
+        <div class="image-container">
+            <img src="https://img.freepik.com/free-photo/medicine-uniform-healthcare-medical-workers-day-concept_185193-108329.jpg?semt=ais_hybrid" alt="Doctor">
+        </div>
+        <div class="form-container">
+            <h2>Appointment Form</h2>
+            <form>
+                <table>
+                    <tr>
+                        <th>Date of Appointment</th>
+                        <td><input type="date" required></td>
+                    </tr>
+                    <tr>
+                        <th>Appointment Time</th>
+                        <td><input type="time" required></td>
+                    </tr>
+                        <tr>
+                        <th>Date of Appointment</th>
+                            <td><input type="date" required></td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>
+                            <input type="text" placeholder="Enter First Name" required>
+                            <input type="text" placeholder="Enter Last Name" required></td>
+                    </tr> 
+                    <tr>
+                        <th>Gender</th>
+                        <td>
+                            <div class="radio-group">
+                                <input type="radio" name="gender" value="male" required> Male
+                                <input type="radio" name="gender" value="female" required> Female
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>
+                            <input type="text" placeholder="Enter City" required>
+                            <input type="text" placeholder="Enter State" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Query</th>
+                        <td><input type="text" placeholder="Enter Query" required></td>
+                    </tr>
+                    <tr>
+                        <th>Appointment Type</th>
+                        <td>Select which appointment type you require!</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <div class="radio-group">
+                                <input type="radio" name="Appointment Type" value="Cervix Checkup" required> Cervix Checkup
+                                <br>
+                                <input type="radio" name="Appointment Type" value="Heart Checkup" required> Heart Checkup
+                                <br>
+                                <input type="radio" name="Appointment Type" value="Eye Checkup" required> Eye Checkup
+                                <br>
+                                <input type="radio" name="Appointment Type" value="Hearing Checkup" required> Hearing Checkup
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <button type="Send">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
