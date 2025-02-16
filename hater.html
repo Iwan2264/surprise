@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Are You So Cute? 💖</title>
+    <title>Why Are You So DUmb? 💖</title>
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -40,6 +40,38 @@
         img {
             width: 150px;
             margin-top: 20px;
+            border-radius: 10px;
+        }
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            width: 60%;
+            border-radius: 10px;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -54,18 +86,56 @@
         <img id="cuteImg" src="images/hmm.jpg" alt="Cute heart">
     </div>
 
+    <!-- Video Pop-up Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>For You 💖</h2>
+            <video id="cuteVideo" autoplay loop muted>
+                <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+                <track src="descriptions_en.vtt" kind="descriptions" srclang="en" label="English Descriptions">
+                <source src="images/gay.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
     <script>
         let index = 1;
+        let images = [
+            "images/hmm.jpg",
+            "images/catbored.png",
+            "images/catlaugh.png",
+            "images/catangry.png",
+            "images/cathehe.jpg"
+        ];
+
         document.getElementById("nextBtn").addEventListener("click", function() {
             if (index <= 4) {
                 document.getElementById("message" + index).style.display = "block";
+                document.getElementById("cuteImg").src = images[index]; // Change image
                 index++;
             }
             if (index > 4) {
                 this.innerText = "Aww 💕";
-                document.getElementById("cuteImg").src = "images/hmm2.jpeg"; 
+                this.addEventListener("click", function() {
+                    let videoModal = document.getElementById("videoModal");
+
+                    videoModal.style.display = "block"; // Show video modal
+                });
+            }
+        });
+
+        // Close the modal when clicking '×' or outside the modal
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("videoModal").style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            let modal = document.getElementById("videoModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
             }
         });
     </script>
-</body>
 </html>
