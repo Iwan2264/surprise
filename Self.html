@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('images/bgpic.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3 {
+            color: #3E2A47;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .block {
+            background-color: rgba(255, 255, 255, 0.6); /* More transparency for gravelly effect */
+            backdrop-filter: blur(10px); /* Blurred glass effect */
+            color: #3E2A47;
+            border-radius: 15px;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1000px; /* Increased width */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .info-container {
+            display: flex;
+            flex-direction: row; /* Changed to row */
+            align-items: center;
+            gap: 20px;
+        }
+        .info-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3E2A47;
+        }
+        .table-container {
+            background: rgba(255, 255, 255, 0.5); /* More transparency */
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3E2A47;
+            color: white;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        td {
+            background-color: rgba(245, 245, 245, 0.8);
+            color: #3E2A47;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .project-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .project-gallery img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        footer a {
+            margin: 0 10px;
+            color: #3E2A47;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .info-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .info-image {
+                margin-bottom: 20px;
+            }
+            .project-gallery {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="block" id="personal-info">
+        <h3>Personal Information</h3>
+        <div class="info-container">
+            <img src="images/pfp.png" alt="Your Profile" class="info-image">
+            <table>
+                <tr>
+                    <th>About</th>
+                    <td>Hello, I'm Safwan, a game and tech enthusiast hailing from the capital of the last Nawab of Bengal, Murshidabad.</td>
+                </tr>
+                <tr>
+                    <th>Interests</th>
+                    <td>
+                        <ul>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Gaming</a> though all I do is troll teammates.</li>
+                            <li>Reading Novels and then overthink like wtf.</li>
+                            <li>Watching <a href="https://myanimelist.net/profile/_Safwan_" target="_blank">Anime</a> then end up watching the same anime multiple times and find out it's all the same generic stuff.</li>
+                            <li>Exploring new genres of <a href="https://open.spotify.com/user/31jarotgchljs4pocyl4anzy42cq?si=S-53x34ySCOOsHihYme2rw&pi=7ZFwR1ltSrWuZ" target="_blank">music</a> then go back to listening to metal, Rabindra Sangeet, and Jpop.</li>
+                            <li>Researching random things and just sleeping at the end.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="block" id="academics-dreams">
+        <h3>Academic Details</h3>
+        <table>
+            <tr><th>10th Grade Completion:</th><td>Batch - 2019</td></tr>
+            <tr><th>12th Grade Completion:</th><td>Batch - 2021</td></tr>
+            <tr><th>Currently Pursuing:</th><td>B.Tech CSE at Amity University. <br>Batch 2024-2026.</td></tr>
+            <tr><th>Skills in Progress:</th><td>Dart-FLutter <br> C++, Python, Java <br> Somewhat HTML-CSS</td></tr>
+            <tr><th>Project in Progress:</th><td>Hospital Management System. <br>Budget Planner <br>Portfolio Website</td></tr>
+        </table>
+    </section>
+
+    <section class="block" id="hobbies-events">
+        <h3>Some Random Events in My Life</h3>
+        <ul>
+            <li>Gold Medal in Maths Olympiad in Class 8th.</li>
+            <li>Won Brawl Star Tourney by BlueStacks India (2019).</li>
+            <li>Won Pubgm Summer Community Event (hosted by Tencent).</li>
+            <li>Played against Choco Taco, Dr Disrespect, Wynsanity in PUBGM Community Tournaments.</li>
+            <li>Selected as Player 1 Member of PUBGMOBILE.</li>
+            <li>Was Vanguard and Core Beta tester for PUBGMOBILE.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <h2>Socials</h2>
+        <a href="https://instagram.com/s.a.f.w.a.n____" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://facebook.com/safwanmondal2" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    </footer>
+</body>
+</html>
