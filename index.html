@@ -10,9 +10,16 @@
             text-align: center;
             background-color: #f5e1ff;
             color: #6a0dad;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
-            margin-top: 100px;
+            margin-top: -50px; /* Adjust as needed */
         }
         a {
             font-size: 24px;
@@ -21,9 +28,25 @@
             background-color: #6a0dad;
             padding: 10px 20px;
             border-radius: 10px;
+            transition: background-color 0.3s ease;
         }
         a:hover {
             background-color: #a854f5;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #6a0dad;
+        }
+        footer a {
+            font-size: 14px;
+            color: #6a0dad;
+            background-color: transparent;
+            padding: 0;
+            text-decoration: underline;
+        }
+        footer a:hover {
+            color: #a854f5;
         }
     </style>
 </head>
@@ -33,5 +56,9 @@
         <p>Click below for a surprise!</p>
         <a href="why.html">💖</a>
     </div>
+
+    <footer style="position: fixed; bottom: 0; width: 100%; text-align: center;">
+        <p style="font-size: 10px;">Not interested? <a href="hater.html">Hater</a>.</p>
+    </footer>
 </body>
 </html>

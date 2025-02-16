@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Are You So Cute? 💖</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #e0e7ff;
+            color: #6a0dad;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .message-box {
+            display: none;
+            font-size: 24px;
+            margin: 20px auto;
+            padding: 20px;
+            width: 50%;
+            background: #f3e8ff;
+            border: 2px solid #6a0dad;
+            border-radius: 10px;
+        }
+        .btn {
+            background: #6a0dad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #9a4dff;
+        }
+        img {
+            width: 150px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💘 Hey You! 💘</h1>
+        <div id="message1" class="message-box">You have a gay smile!</div>
+        <div id="message2" class="message-box">Your laugh is gay!</div>
+        <div id="message3" class="message-box">You make hearts lesbian!</div>
+        <div id="message4" class="message-box">Okay, but really... why are you so gay?</div>
+        <button id="nextBtn" class="btn">Next 💖</button>
+        <img id="cuteImg" src="images/hmm.jpg" alt="Cute heart">
+    </div>
+
+    <script>
+        let index = 1;
+        document.getElementById("nextBtn").addEventListener("click", function() {
+            if (index <= 4) {
+                document.getElementById("message" + index).style.display = "block";
+                index++;
+            }
+            if (index > 4) {
+                this.innerText = "Aww 💕";
+                document.getElementById("cuteImg").src = "images/hmm2.jpeg"; 
+            }
+        });
+    </script>
+</body>
+</html>
